@@ -1,6 +1,5 @@
 Option Explicit
 Option Base 1
-
 Sub Main()
 
     Call startmacro
@@ -10,7 +9,6 @@ Sub Main()
     MsgBox "処理完了"
 
 End Sub
-
 Sub deleteBlankCell()
 '空白セルの削除をしつつ、B列にすべての値を持っていく
 
@@ -58,15 +56,15 @@ Sub chkString()
     Dim msg As String
     
     'Array
-    Dim chkArr() As Variant '判定した文字列を配列に入れる
-    Dim hanteiArr() As Variant  '判定結果を配列に格納する
-    
+    Dim chkArr() As Variant
+    Dim hanteiArr() As Variant
+
     MaxRow = Cells(Rows.Count, 2).End(xlUp).Row '最終行取得
     Range(Cells(1, 2), Cells(MaxRow, 2)).RemoveDuplicates Columns:=1, Header:=xlYes '重複削除
     
 
     MaxRow = Cells(Rows.Count, 2).End(xlUp).Row '最終行再取得
-    chkArr() = Range(Cells(2, 2), Cells(MaxRow, 2)) '配列に入れる
+    chkArr() = Range(Cells(2, 2), Cells(MaxRow, 2)) '確認対象の文字列を配列に入れる
     
     For LoopCnt = 1 To UBound(chkArr)
         chkStr = chkArr(LoopCnt, 1)
