@@ -9,6 +9,7 @@ Sub Main()
     MsgBox "処理完了"
 
 End Sub
+
 Sub deleteBlankCell()
 '空白セルの削除をしつつ、B列にすべての値を持っていく
 
